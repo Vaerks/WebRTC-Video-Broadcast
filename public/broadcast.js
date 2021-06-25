@@ -2,14 +2,15 @@ const peerConnections = {};
 const config = {
   iceServers: [
     { 
-      "urls": "stun:stun.l.google.com:19302",
+    //  "urls": "stun:stun.l.google.com:19302",
+      "urls":"stun:stun.mhtech.dk:3478"
     },
-    // { 
-    //   "urls": "turn:TURN_IP?transport=tcp",
-    //   "username": "TURN_USERNAME",
-    //   "credential": "TURN_CREDENTIALS"
-    // }
-  ]
+     { 
+       "urls": "turn:turn.mhtech.dk:3478?transport=tcp",
+       "username": "vaerks",
+       "credential": "Vaerks1992!"
+     }
+]
 };
 
 const socket = io.connect(window.location.origin);
